@@ -22,21 +22,9 @@
 
 返回按钮：返回到上一层
 
+点击演示按钮绑定到一个powershell命令。
+
 根据选择跳转到演示或者训练面板
-
-### 演示面板
-
-标题：场景名称+演示
-
-背景图片：对应的场景jpg
-
-界面主体是场景设置（仅作展示使用，不参与具体的命令构成）
-
-扰动幅度（滑块实现，值域0.1-4）：默认1.02
-
-返回按钮：返回到上一层
-
-右下角是“开始演示”按钮，按钮绑定到一个powershell命令。
 
 ### 训练面板
 
@@ -78,10 +66,12 @@ cd F:\code\rl\recurrent-ppo-truncated-bptt2; F:\condaenvs\mlagents\python.exe de
 Unity迷宫搜索：
 
 ```bash
-cd F:\code\rl\recurrent-ppo-truncated-bptt2; F:\condaenvs\mlagents\python.exe PyQT_1.py ugv/ugv_search_mg --name 20240713002100dddd --ckpt 150189 --run --port 17635
+cd F:\code\rl\recurrent-ppo-truncated-bptt2; F:\condaenvs\mlagents\python.exe main.py ugv/ugv_search_mg --name 20240713002100dddd --ckpt 150189 --run --port 17635
 ```
 
 ### 训练命令
+
+#### powershell
 
 Gym CarRacing：
 
@@ -101,6 +91,23 @@ Unity迷宫搜索：
 cd F:\code\rl\recurrent-ppo-truncated-bptt2; F:\condaenvs\mlagents\python.exe train_search.py
 ```
 
----
+#### cmd
 
-请你用PyQT5实现
+Gym CarRacing：
+
+```cmd
+cd /d F:\code\rl\recurrent-ppo-truncated-bptt2 && F:\condaenvs\mlagents\python.exe train_gymcarracing.py
+```
+
+Unity街道搜索：
+
+```cmd
+cd /d F:\code\rl\recurrent-ppo-truncated-bptt2 && F:\condaenvs\mlagents\python.exe train_race.py
+```
+
+Unity迷宫搜索：
+
+```cmd
+cd /d F:\code\rl\recurrent-ppo-truncated-bptt2 && F:\condaenvs\mlagents\python.exe train_search.py
+```
+
