@@ -2,7 +2,6 @@ from PyQt5.QtWidgets import QMessageBox, QWidget, QMainWindow, QApplication
 
 import 导航面板
 from My_场景面板 import My_场景面板
-# from My_LoginWindow import My_LoginWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -22,18 +21,18 @@ class My_MainWindow(QMainWindow, 导航面板.Ui_Form):
     def init(self):
         self.setAutoFillBackground(True)
         palette = self.palette()
-        pixmap = QtGui.QPixmap("./background.png")
+        pixmap = QtGui.QPixmap("assert/background.png")
         brush = QtGui.QBrush(pixmap)
         palette.setBrush(QtGui.QPalette.Window, brush)
         self.setPalette(palette)
 
-        pixmap = QtGui.QPixmap("./GymCarRacing.png")
+        pixmap = QtGui.QPixmap("assert/GymCarRacing.png")
         self.pushButton.setIcon(QtGui.QIcon(pixmap))
         self.pushButton.setIconSize(QtCore.QSize(self.pushButton.width(), self.pushButton.height()))
-        pixmap = QtGui.QPixmap("./Unity街道搜索.png")
+        pixmap = QtGui.QPixmap("assert/Unity街道搜索.png")
         self.pushButton_2.setIcon(QtGui.QIcon(pixmap))
         self.pushButton_2.setIconSize(QtCore.QSize(self.pushButton_2.width(), self.pushButton_2.height()))
-        pixmap = QtGui.QPixmap("./Unity迷宫搜索.png")
+        pixmap = QtGui.QPixmap("assert/Unity迷宫搜索.png")
         self.pushButton_3.setIcon(QtGui.QIcon(pixmap))
         self.pushButton_3.setIconSize(QtCore.QSize(self.pushButton_3.width(), self.pushButton_3.height()))
 

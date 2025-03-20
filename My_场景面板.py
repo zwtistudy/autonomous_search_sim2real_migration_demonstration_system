@@ -20,13 +20,13 @@ class My_场景面板(QWidget, 场景面板.Ui_Form):
         self.label.setText(self.scene_name)
 
         if self.scene_name == 'GymCarRacing':
-            pixmap = QtGui.QPixmap("./GymCarRacing.png")
+            pixmap = QtGui.QPixmap("assert/GymCarRacing.png")
         elif self.scene_name == 'Unity街道搜索':
-            pixmap = QtGui.QPixmap("./Unity街道搜索.png")
+            pixmap = QtGui.QPixmap("assert/Unity街道搜索.png")
         elif self.scene_name == 'Unity迷宫搜索':
-            pixmap = QtGui.QPixmap("./Unity迷宫搜索.png")
+            pixmap = QtGui.QPixmap("assert/Unity迷宫搜索.png")
         else:
-            pixmap = QtGui.QPixmap("./background.png")
+            pixmap = QtGui.QPixmap("assert/background.png")
 
         self.setAutoFillBackground(True)
         palette = self.palette()
