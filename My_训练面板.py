@@ -43,12 +43,14 @@ class My_训练面板(QWidget, 训练面板.Ui_Form):
         self.hide()
 
     def pushButton_clicked(self):
+        # 获取spinBox_4的值
+        n_workers = self.spinBox_4.value()
         if self.scene_name == 'GymCarRacing':
-            cmd = r'cd /d F:\code\rl\recurrent-ppo-truncated-bptt2 && F:\condaenvs\mlagents\python.exe train_gymcarracing.py'
+            cmd = rf'cd /d F:\code\rl\recurrent-ppo-truncated-bptt2 && F:\condaenvs\mlagents\python.exe train_gymcarracing.py --n_workers {n_workers}'
         elif self.scene_name == 'Unity街道搜索':
-            cmd = r'cd /d F:\code\rl\recurrent-ppo-truncated-bptt2 && F:\condaenvs\mlagents\python.exe train_race.py'
+            cmd = rf'cd /d F:\code\rl\recurrent-ppo-truncated-bptt2 && F:\condaenvs\mlagents\python.exe train_race.py --n_workers {n_workers}'
         elif self.scene_name == 'Unity迷宫搜索':
-            cmd = r'cd /d F:\code\rl\recurrent-ppo-truncated-bptt2 && F:\condaenvs\mlagents\python.exe train_search.py'
+            cmd = rf'cd /d F:\code\rl\recurrent-ppo-truncated-bptt2 && F:\condaenvs\mlagents\python.exe train_search.py --n_workers {n_workers}'
         # 执行powershell命令
         import subprocess
         terminal_command = f'start cmd.exe /k "{cmd}"'
